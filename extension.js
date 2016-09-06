@@ -1,7 +1,7 @@
 (function () {
 
     // Change this to your GitHub username so you don't have to modify so many things.
-    var fork = "basicBot";
+    var fork = "art3misa";
 
     // Define our function responsible for extending the bot.
     function extend() {
@@ -46,14 +46,14 @@
     //Change the bots default settings and make sure they are loaded on launch
 
     localStorage.setItem("basicBotsettings", JSON.stringify({
-      botName: "basicBot",
+      botName: "EureekaBot",
       language: "english",
       chatLink: "https://rawgit.com/basicBot/source/master/lang/en.json",
       scriptLink: "https://rawgit.com/basicBot/source/master/basicBot.js",
       roomLock: false, // Requires an extension to re-load the script
       startupCap: 1, // 1-200
       startupVolume: 0, // 0-100
-      startupEmoji: false, // true or false
+      startupEmoji: true, // true or false
       autowoot: true,
       autoskip: false,
       smartSkip: true,
@@ -68,29 +68,29 @@
       maximumLocktime: 10,
       cycleGuard: true,
       maximumCycletime: 10,
-      voteSkip: false,
-      voteSkipLimit: 10,
+      voteSkip: true,
+      voteSkipLimit: 8,
       historySkip: false,
       timeGuard: true,
-      maximumSongLength: 10,
+      maximumSongLength: 8,
       autodisable: true,
       commandCooldown: 30,
       usercommandsEnabled: true,
       skipPosition: 3,
       skipReasons: [
-      ["theme", "This song does not fit the room theme. "],
+      ["tema", "Tu vídeo no va con el tema del DJ Room."],
       ["op", "This song is on the OP list. "],
-      ["history", "This song is in the history. "],
+      ["history", "Ya se ha tocado esta canción."],
       ["mix", "You played a mix, which is against the rules. "],
-      ["sound", "The song you played had bad sound quality or no sound. "],
-      ["nsfw", "The song you contained was NSFW (image or sound). "],
-      ["unavailable", "The song you played was not available for some users. "]
+      ["sound", "Tu canción tiene mala calidad de audio. "],
+      ["nsfw", "Tu vídeo es NSFW, no seas tan cerdo por favor. "],
+      ["nodisp", "The song you played was not available for some users. "]
       ],
       afkpositionCheck: 15,
       afkRankCheck: "ambassador",
       motdEnabled: false,
-      motdInterval: 5,
-      motd: "Temporary Message of the Day",
+      motdInterval: 8,
+      motd: "Recuerda pasar a leer la Guia para ser DJ en el foro: https://foro.drizzard.com/threads/1658/#post-9410 ",
       filterChat: true,
       etaRestriction: false,
       welcome: true,
@@ -100,7 +100,7 @@
       fbLink: null,
       youtubeLink: null,
       website: null,
-      intervalMessages: [],
+      intervalMessages: "Recomienda el DJ Room a tus amig@s en la comunidad Drizzard! <3 ",
       messageInterval: 5,
       songstats: true,
       commandLiteral: "!",
@@ -112,6 +112,6 @@
     }));
 
     // Start the bot and extend it when it has loaded.
-    $.getScript("https://rawgit.com/basicBot/source/master/basicBot.js", extend);
+    $.getScript("https://rawgit.com/EureekaBot/source/master/EureekaBot.js", extend);
 
 }).call(this);
